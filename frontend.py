@@ -5,7 +5,7 @@ import os
 # Set page config for a wider, cleaner layout
 st.set_page_config(page_title="AI Exam Grader", layout="wide")
 
-RENDER_URL = "https://ai-grading-system-i44k.onrender.com/"
+RENDER_URL = "https://ai-grading-system-i44k.onrender.com/grade_exam/"
 LOCAL_URL = "http://localhost:8000/grade_exam/"
 
 # This logic automatically detects if you are running locally or on Streamlit Cloud
