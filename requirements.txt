@@ -1,0 +1,21 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+langchain
+langchain-groq
+langchain-community
+langchain-core
+langchain-classic
+transformers
+langgraph
+torch==2.5.1+cu121
+torchvision==0.20.1+cu121
+Pillow
+python-dotenv
+langchain-huggingface
+pymupdf
+fpdf
+langgraph-checkpoint-sqlite
+fastapi
+uvicorn
+python-multipart
+streamlit
