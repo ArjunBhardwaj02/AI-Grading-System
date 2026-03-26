@@ -1,11 +1,18 @@
 import streamlit as st
 import requests
+import os
 
 # Set page config for a wider, cleaner layout
 st.set_page_config(page_title="AI Exam Grader", layout="wide")
 
-# The URL of your FastAPI backend
-API_URL = "http://localhost:8000/grade_exam/"
+RENDER_URL = "https://ai-grading-system-i44k.onrender.com/"
+LOCAL_URL = "http://localhost:8000/grade_exam/"
+
+# This logic automatically detects if you are running locally or on Streamlit Cloud
+if os.path.exists(".env") or "localhost" in st.query_params:
+    API_URL = LOCAL_URL
+else:
+    API_URL = RENDER_URL
 
 st.title("📝 Automated AI Exam Grader")
 st.markdown("Upload the exam materials and the student's answer sheet to instantly generate a graded report.")
