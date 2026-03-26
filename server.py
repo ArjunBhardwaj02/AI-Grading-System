@@ -11,6 +11,10 @@ server = FastAPI(title = "AI Grading App", version = "1.0")
 #ensure temporary directory exists for uploaded files
 os.makedirs("temp_uploads",exist_ok = True)
 
+@server.get("/")
+async def health_check():
+    return {"status": "Backend is running and awake!"}
+
 @server.post("/grade_exam/")
 async def grade_exam_endpoint(
     student_id: str = Form(...),
